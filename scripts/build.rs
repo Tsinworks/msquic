@@ -29,7 +29,8 @@ fn main() {
             .define("CMAKE_OSX_ARCHITECTURES", "arm64")
             .define("CMAKE_OSX_DEPLOYMENT_TARGET", "11.0"),
         "x86_64-pc-windows-msvc" => config
-            .define("QUIC_TLS", "schannel"),
+            .define("QUIC_TLS", "schannel")
+            .define("QUIC_SOURCE_LINK", "off"),
         _ => &mut config
     };
 
