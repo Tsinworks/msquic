@@ -28,6 +28,8 @@ fn main() {
         "aarch64-apple-darwin" => config
             .define("CMAKE_OSX_ARCHITECTURES", "arm64")
             .define("CMAKE_OSX_DEPLOYMENT_TARGET", "11.0"),
+        "x86_64-pc-windows-msvc" => config
+            .define("QUIC_TLS", "schannel"),
         _ => &mut config
     };
 
